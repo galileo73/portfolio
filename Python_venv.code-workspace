@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../../../Python/Python_venv"
+		},
+		{
+			"path": "../../iRedCarDealership/car-dealership-backend"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic",
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"liveServer.settings.multiRootWorkspaceName": "Portfolio"
+	}
+}
