@@ -10,3 +10,19 @@ export type Project = {
   link?: string;
   github?: string;
 };
+
+export type ExperienceItem = {
+  company: string;
+  role: string;
+  location?: string;
+  start: string; // es: "2024"
+  end: string;   // es: "Present"
+  highlights: string[];
+};
+
+export type EducationItem = {
+  title: string;
+  org: string;
+  year: string;
+  details?: string[];
+};

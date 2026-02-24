@@ -4,6 +4,8 @@ import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
 import Projects from "./components/sections/Projects";
 import Contact from "./components/sections/Contact";
+import Experience from "./components/sections/Experience";
+import Education from "./components/sections/Education";
 
 export default function App() {
   return (
@@ -12,6 +14,8 @@ export default function App() {
       <main className="pt-20">
         <Hero />
         <Skills />
+        <Experience />
+        <Education />
         <Projects />
         <Contact />
       </main>

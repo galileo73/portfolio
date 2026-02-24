@@ -8,6 +8,8 @@ export default function Header() {
 
         <nav className="hidden md:flex gap-8 text-sm text-neutral-400">
           <a href="#skills" className="hover:text-white">Skills</a>
+          <a href="#experience" className="hover:text-white">Experience</a>
+          <a href="#education" className="hover:text-white">Education</a>
           <a href="#projects" className="hover:text-white">Projects</a>
           <a href="#contact" className="hover:text-white">Contact</a>
         </nav>
