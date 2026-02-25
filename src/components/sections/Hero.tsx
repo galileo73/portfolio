@@ -1,7 +1,7 @@
 import Container from "../layout/Container";
 import Reveal from "../ui/Reveal";
 import profileImg from "../../assets/profile.png";
-import { IconLinkedIn, IconGitHub, IconOpenSea, IconX } from "../ui/Icons";
+import { useI18n } from "../../i18n/I18nProvider";
 
 const METRICS = [
   { k: "20+ yrs", v: "Mission-critical systems" },
@@ -9,17 +9,11 @@ const METRICS = [
   { k: "Security", v: "Accreditation & Risk" },
 ];
 
-const LINKS = [
-  { label: "LinkedIn", href: "PASTE_LINKEDIN" },
-  { label: "GitHub", href: "https://github.com/galileo73" },
-  { label: "OpenSea", href: "PASTE_OPENSEA" },
-  { label: "X", href: "PASTE_X" },
-];
-
 export default function Hero() {
+  const { t } = useI18n();
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* subtle vignette */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.06),transparent_55%)]" />
 
       <Container>
@@ -28,23 +22,19 @@ export default function Hero() {
           <div className="relative">
             <Reveal>
               <p className="text-sm text-neutral-400 tracking-wide">
-                Executive Technical Consultant • Space Systems Architect
+                {t.hero.role}
               </p>
             </Reveal>
 
             <Reveal delay={0.05}>
-              <h1 className="mt-6 text-5xl md:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight">
-                GNSS, secure architectures,
-                <br />
-                digital execution.
+              <h1 className="mt-6 text-5xl md:text-6xl xl:text-7xl font-bold leading-[1.02] tracking-tight whitespace-pre-line">
+                {t.hero.title}
               </h1>
             </Reveal>
 
             <Reveal delay={0.1}>
               <p className="mt-7 text-lg text-neutral-400 max-w-2xl leading-relaxed">
-                I support space programmes and organisations with architecture,
-                governance, and delivery across mission-critical systems and modern
-                digital platforms.
+                {t.hero.desc}
               </p>
             </Reveal>
 
@@ -54,19 +44,19 @@ export default function Hero() {
                   href="#experience"
                   className="px-6 py-3 rounded-xl bg-white text-black font-medium hover:opacity-90 transition"
                 >
-                  Experience
+                  {t.hero.cta1}
                 </a>
                 <a
                   href="#projects"
                   className="px-6 py-3 rounded-xl border border-neutral-700 hover:border-white/70 transition"
                 >
-                  Case Studies
+                  {t.hero.cta2}
                 </a>
                 <a
                   href="#contact"
                   className="px-6 py-3 rounded-xl border border-neutral-800 hover:border-white/50 transition text-neutral-200"
                 >
-                  Contact
+                  {t.hero.cta3}
                 </a>
               </div>
             </Reveal>
@@ -79,12 +69,12 @@ export default function Hero() {
                   "Ground Segment",
                   "System Engineering",
                   "Digital Platforms",
-                ].map((t) => (
+                ].map((x) => (
                   <span
-                    key={t}
+                    key={x}
                     className="border border-neutral-800 px-3 py-1 rounded-full"
                   >
-                    {t}
+                    {x}
                   </span>
                 ))}
               </div>
@@ -99,12 +89,9 @@ export default function Hero() {
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/18 via-white/6 to-transparent" />
 
                   <div className="relative rounded-2xl bg-neutral-950/60 backdrop-blur-xl border border-neutral-800 p-8 shadow-[0_0_60px_rgba(255,255,255,0.04)]">
-                    {/* TOP */}
                     <div className="flex items-center gap-4">
                       <div className="relative">
                         <div className="absolute -inset-8 rounded-full bg-white/6 blur-2xl" />
-
-                        {/* PHOTO (visible + sized) */}
                         <img
                           src={profileImg}
                           alt="Gianluigi"
@@ -113,15 +100,16 @@ export default function Hero() {
                       </div>
 
                       <div>
-                        <p className="text-sm text-neutral-400">Gianluigi</p>
-                        <p className="text-xl font-semibold">Consulting • Architecture</p>
+                        <p className="text-sm text-neutral-400">Gianluigi Rossi</p>
+                        <p className="text-xl font-semibold">
+                          Consulting • Architecture
+                        </p>
                         <p className="text-sm text-neutral-500 mt-1">
                           Space systems + modern delivery
                         </p>
                       </div>
                     </div>
 
-                    {/* METRICS */}
                     <div className="mt-7 grid grid-cols-1 gap-3">
                       {METRICS.map((m) => (
                         <div
@@ -134,15 +122,13 @@ export default function Hero() {
                       ))}
                     </div>
 
-                    {/* LINKS */}
                     <div className="mt-7 flex flex-wrap gap-3">
                       <a
                         href="PASTE_LINKEDIN"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl border border-neutral-800 bg-black/20 px-4 py-2 text-sm text-neutral-200 hover:border-white/40 hover:text-white transition"
+                        className="hover-lift inline-flex items-center gap-2 rounded-xl border border-neutral-800 bg-black/20 px-4 py-2 text-sm text-neutral-200 hover:border-white/40 hover:text-white transition"
                       >
-                        <IconLinkedIn className="w-4 h-4" />
                         LinkedIn
                       </a>
 
@@ -150,9 +136,8 @@ export default function Hero() {
                         href="https://github.com/galileo73"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl border border-neutral-800 bg-black/20 px-4 py-2 text-sm text-neutral-200 hover:border-white/40 hover:text-white transition"
+                        className="hover-lift inline-flex items-center gap-2 rounded-xl border border-neutral-800 bg-black/20 px-4 py-2 text-sm text-neutral-200 hover:border-white/40 hover:text-white transition"
                       >
-                        <IconGitHub className="w-4 h-4" />
                         GitHub
                       </a>
 
@@ -160,9 +145,8 @@ export default function Hero() {
                         href="PASTE_X"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl border border-neutral-800 bg-black/20 px-4 py-2 text-sm text-neutral-200 hover:border-white/40 hover:text-white transition"
+                        className="hover-lift inline-flex items-center gap-2 rounded-xl border border-neutral-800 bg-black/20 px-4 py-2 text-sm text-neutral-200 hover:border-white/40 hover:text-white transition"
                       >
-                        <IconX className="w-4 h-4" />
                         X
                       </a>
 
@@ -170,9 +154,8 @@ export default function Hero() {
                         href="PASTE_OPENSEA"
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl border border-neutral-800 bg-black/20 px-4 py-2 text-sm text-neutral-200 hover:border-white/40 hover:text-white transition"
+                        className="hover-lift inline-flex items-center gap-2 rounded-xl border border-neutral-800 bg-black/20 px-4 py-2 text-sm text-neutral-200 hover:border-white/40 hover:text-white transition"
                       >
-                        <IconOpenSea className="w-4 h-4" />
                         OpenSea
                       </a>
                     </div>
@@ -180,7 +163,8 @@ export default function Hero() {
                 </div>
 
                 <p className="mt-4 text-xs text-neutral-500">
-                  Advisory + hands-on delivery. Clear communication. Measurable outcomes.
+                  Advisory + hands-on delivery. Clear communication. Measurable
+                  outcomes.
                 </p>
               </div>
             </div>

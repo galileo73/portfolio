@@ -32,3 +32,21 @@ export function IconOpenSea({ className = "" }: Props) {
     </svg>
   );
 }
+
+export function IconMail({ className = "" }: Props) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+      <path d="M4 6h16v12H4z" />
+      <path d="M4 6l8 6 8-6" />
+    </svg>
+  );
+}
+
+export function IconCalendar({ className = "" }: Props) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.8">
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M16 3v4M8 3v4M3 10h18" />
+    </svg>
+  );
+}

@@ -56,3 +56,25 @@ img {
   height: auto;
   display: block;
 }
+
+/* === PREMIUM HOVER LIFT === */
+.hover-lift {
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+
+/* === PREMIUM GLASS SURFACE === */
+.glass-surface {
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.02)
+    ),
+    rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
