@@ -1,22 +1,22 @@
 import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer"
 import Hero from "./components/sections/Hero";
-import Skills from "./components/sections/Skills";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
+import Bento from "./components/sections/Bento";
 import Experience from "./components/sections/Experience";
+import Projects from "./components/sections/Projects";
 import Education from "./components/sections/Education";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 
 export default function App() {
   return (
-    <div className="bg-black text-white">
+    <div className="min-h-screen w-full text-white">
       <Header />
-      <main className="pt-20">
+      <main className="pt-24">
         <Hero />
-        <Skills />
+        <Bento />
         <Experience />
-        <Education />
         <Projects />
+        <Education />
         <Contact />
       </main>
       <Footer />
