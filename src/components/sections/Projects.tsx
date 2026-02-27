@@ -20,27 +20,32 @@ export default function Projects() {
         <Reveal>
           <SectionHeader
             title="Case Studies"
-            subtitle="A few selected initiatives with clear problem framing, approach and measurable value."
+            subtitle="Selected initiatives framed as executive briefs: problem, approach, impact."
           />
         </Reveal>
 
-        <div className="space-y-8">
+        <div className="mt-14 space-y-8">
           {caseStudies.map((cs) => (
             <Reveal key={cs.title} delay={0.06}>
               <Card className="p-0">
-                <div className="grid lg:grid-cols-12 gap-0">
+                <div className="grid lg:grid-cols-12">
                   {/* LEFT SUMMARY */}
                   <div className="lg:col-span-4 p-8 border-b lg:border-b-0 lg:border-r border-neutral-900">
                     <div className="flex items-start justify-between gap-4">
-                      <h4 className="text-xl font-semibold">{cs.title}</h4>
+                      <h3 className="text-xl font-semibold">{cs.title}</h3>
                       <Tag tag={cs.tag} />
                     </div>
 
-                    <p className="mt-4 text-neutral-400">{cs.summary}</p>
+                    <p className="mt-4 text-neutral-400 leading-relaxed">
+                      {cs.summary}
+                    </p>
 
                     <div className="mt-6 flex flex-wrap gap-2 text-xs text-neutral-500">
                       {cs.tech.map((t) => (
-                        <span key={t} className="border border-neutral-800 px-2 py-1 rounded">
+                        <span
+                          key={t}
+                          className="border border-neutral-800 px-2 py-1 rounded"
+                        >
                           {t}
                         </span>
                       ))}
