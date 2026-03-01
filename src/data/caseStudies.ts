@@ -1,64 +1,65 @@
-import type { CaseStudy } from "./types";
+export type CaseStudyTag = "space" | "digital" | "venture";
+
+export type CaseStudy = {
+  title: string;
+  tag: CaseStudyTag;
+  summary: string;
+
+  problem: string;
+  approach: string;
+  impact: string;
+
+  tech: string[];
+  links?: { label: string; href: string }[];
+};
 
 export const caseStudies: CaseStudy[] = [
   {
-    title: "EO Veracity",
+    title: "Galileo Ground Segment Deployment & Migration Planning",
     tag: "space",
     summary:
-      "Integrity and traceability workflow concept for EO data in multi-stakeholder environments.",
+      "Operational planning and risk-controlled migration strategy for Ground Segment evolutions aligned to the programme roadmap.",
     problem:
-      "EO products often need verifiable provenance, evidence trails and audit-ready traceability across teams and suppliers.",
+      "Ground segment evolutions required coordinated planning across stakeholders, strict validation alignment, and controlled operational risk.",
     approach:
-      "Designed a secure-by-design workflow: evidence capture, metadata strategy, role-based access, and tamper-resistance pattern; structured UI for review and decision points.",
+      "Led evolution reviews, consolidated stakeholder inputs, produced deployment/migration plans, and supported readiness reviews and performance reporting.",
     impact:
-      "Clear integrity narrative for stakeholders, audit-friendly evidence chain, and a scalable blueprint for future integration.",
-    tech: ["React", "TypeScript", "FastAPI", "MongoDB", "Blockchain patterns"],
-    links: [{ label: "GitHub", href: "https://github.com/galileo73" }],
+      "Optimized migration timelines, reduced deployment risks, and improved decision-making through structured reporting. Contributed to cost reduction on proposals (10% reported in CV context).",
+    tech: ["Service Ops", "Validation Planning", "Risk Analysis", "Reporting", "Stakeholder Mgmt"],
+    links: [
+      { label: "LinkedIn", href: "PASTE_LINKEDIN" },
+    ],
   },
   {
-    title: "Programme Review Dashboard (SB / Governance)",
+    title: "GOVSATCOM Security Accreditation Support (Initial Service)",
     tag: "space",
     summary:
-      "Milestone and review tracking model for programme governance and decision support.",
+      "Security governance and accreditation documentation support focused on compliance, anomalies, and non-conformance closure.",
     problem:
-      "Programme governance is hard when milestones, dependencies and reviews live across separate documents and trackers.",
+      "Initial Service milestone required robust accreditation evidence and consistent security compliance across requirements, design and operations.",
     approach:
-      "Modeled a consolidated dataset: milestones, dependencies, status and evidence; designed UI for quarterly updates and drill-down views.",
+      "Reviewed security requirements/specs/design, supported accreditation documentation, and analyzed anomalies/non-conformances for timely resolution.",
     impact:
-      "Improved clarity for planning and reviews; faster status comprehension and structured traceability.",
-    tech: ["React", "TypeScript", "Data modeling"],
-    links: [{ label: "GitHub", href: "https://github.com/galileo73" }],
+      "Improved compliance readiness and reduced accreditation friction by accelerating closure of security-related findings and documentation maturity.",
+    tech: ["Security Governance", "Compliance", "Accreditation", "Non-Conformance Mgmt"],
+    links: [
+      { label: "Contact", href: "#contact" },
+    ],
   },
   {
-    title: "Lead Automation System",
+    title: "EO Veracity – Full-Stack Dashboard (React + FastAPI)",
     tag: "digital",
     summary:
-      "Automation-driven lead workflow with scoring and daily outreach list, designed to be reusable across industries.",
+      "Modern web dashboard with authentication, role-based UI, and modular architecture designed for future integrations.",
     problem:
-      "Manual lead collection and outreach wastes time and lacks consistent prioritization.",
+      "Needed a structured dashboard foundation with secure login, role-based navigation, and scalable component architecture.",
     approach:
-      "Built a lightweight pipeline: collect → dedupe → score → produce daily prioritized outreach list; template-first design for reuse.",
+      "Built React layout with reusable components, implemented FastAPI backend + MongoDB, JWT auth/decoding, role-based sidebar/header, and clean project structure.",
     impact:
-      "Repeatable process with low overhead and faster execution for outreach campaigns.",
-    tech: ["Automation", "Google Sheets/Apps Script", "CRM-ready flow"],
-    links: [{ label: "GitHub", href: "https://github.com/galileo73" }],
-  },
-  {
-    title: "NFT / Digital Brand",
-    tag: "venture",
-    summary:
-      "Creative venture combining branding, distribution channels and digital experimentation.",
-    problem:
-      "Collections fail when branding and distribution are weak, even with good visuals.",
-    approach:
-      "Structured positioning, content pillars and channel strategy; created link hub approach to drive traffic and conversions.",
-    impact:
-      "Clear brand identity and a scalable approach to iterate on messaging and channels.",
-    tech: ["Branding", "Content", "Community", "Distribution"],
+      "Delivered a maintainable base platform enabling rapid feature expansion (Admin, contracts, configuration, future storage/blockchain integrations).",
+    tech: ["React", "Vite", "TypeScript", "Tailwind", "FastAPI", "MongoDB", "JWT"],
     links: [
-      { label: "OpenSea", href: "PASTE_OPENSEA" },
-      { label: "X", href: "PASTE_X" },
-      { label: "Instagram", href: "PASTE_IG" },
+      { label: "GitHub", href: "https://github.com/galileo73" },
     ],
   },
 ];

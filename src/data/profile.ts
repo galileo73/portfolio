@@ -1,11 +1,17 @@
 export const profile = {
-  name: "Gianluigi",
-  role: "Executive Technical Consultant • Space Systems Architect",
-  headline: "GNSS & mission-critical systems. Secure architectures. Digital execution.",
-  summary:
-    "20+ years across Galileo Ground Segment, PRS, security accreditation and system engineering. I bridge complex space programmes with modern digital platforms and automation.",
-  ctas: {
-    primary: { label: "View Experience", href: "#experience" },
-    secondary: { label: "Strategic Projects", href: "#projects" },
+  name: "Gianluigi Rossi",
+  headline: "Executive Technical Consultant • Space Systems Architect",
+  location: "Prague, Czechia",
+  emails: ["gianluigi.rossi@exprivia.com", "rossi.gianluigi@gmail.com"],
+  phones: ["+420 606 350 888", "+39 333 264 5642"],
+  website: "https://github.com/galileo73/galileo73",
+
+  links: {
+    linkedin: "https://linkedin.com/in/gianluigirossialtran",
+    github: "https://github.com/galileo73",
+    instagram: "PASTE_INSTAGRAM",
+    x: "PASTE_X",
+    opensea: "PASTE_OPENSEA",
+    calendly: "PASTE_CALENDLY",
   },
-};
+} as const;
