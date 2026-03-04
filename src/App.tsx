@@ -9,10 +9,9 @@ import Footer from "./components/layout/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen w-full text-white bg-black">
+    <div className="min-h-screen w-full text-white">
       <Header />
-
-      {/* Header height compensation */}
+      {/* header is h-16 => pt-16 keeps alignment tight */}
       <main className="pt-16 md:pt-20">
         <Hero />
         <Bento />
@@ -21,7 +20,6 @@ export default function App() {
         <Education />
         <Contact />
       </main>
-
       <Footer />
     </div>
   );

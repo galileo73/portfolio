@@ -69,3 +69,5 @@ body::before {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
+
+section { scroll-margin-top: 96px; }
