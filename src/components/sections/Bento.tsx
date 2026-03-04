@@ -2,68 +2,42 @@ import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
 import Reveal from "../ui/Reveal";
+import { useI18n } from "../../i18n/I18nProvider";
+import { bentoByLang } from "../../data/bento";
 
-const items = [
-  {
-    title: "Galileo & GNSS",
-    desc: "Ground Segment evolutions, PRS context, governance and service continuity.",
-    span: "lg:col-span-6 lg:row-span-2",
-    chips: ["Programmes", "Governance", "Continuity"],
-  },
-  {
-    title: "Security & Accreditation",
-    desc: "Risk-driven engineering, compliance alignment and assurance evidence.",
-    span: "lg:col-span-3",
-    chips: ["Risk", "Compliance", "Assurance"],
-  },
-  {
-    title: "System Architecture",
-    desc: "Requirements flowdown, interfaces, validation coordination.",
-    span: "lg:col-span-3",
-    chips: ["Architecture", "Interfaces", "Validation"],
-  },
-  {
-    title: "Operational Governance",
-    desc: "SLA/KPI monitoring, release readiness and stakeholder alignment.",
-    span: "lg:col-span-6",
-    chips: ["SLA/KPI", "Readiness", "Operations"],
-  },
-  {
-    title: "Digital Platforms",
-    desc: "Dashboards, automation workflows and CI-driven delivery.",
-    span: "lg:col-span-3",
-    chips: ["React", "Automation", "CI"],
-  },
-  {
-    title: "Ventures & Innovation",
-    desc: "NFT brand, digital distribution channels and experimentation.",
-    span: "lg:col-span-3",
-    chips: ["Brand", "Community", "Channels"],
-  },
+const spans = [
+  "lg:col-span-6",
+  "lg:col-span-3",
+  "lg:col-span-3",
+  "lg:col-span-6",
+  "lg:col-span-3",
+  "lg:col-span-3",
 ];
 
 export default function Bento() {
+  const { t, lang } = useI18n();
+  const items = bentoByLang[lang];
+
   return (
-    <section className="py-24">
+    <section className="py-20 md:py-24 border-t border-neutral-800">
       <Container>
         <Reveal>
-          <SectionHeader
-            title="Domains & Capabilities"
-            subtitle="Executive view of core expertise, delivery approach and innovation track."
-          />
+          <SectionHeader title={t.bento.title} subtitle={t.bento.subtitle} />
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6 auto-rows-[200px]">
-            {items.map((it) => (
-              <Card key={it.title} className={it.span}>
-                <div className="h-full flex flex-col justify-between">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-6 auto-rows-[160px]">
+            {items.map((it, idx) => (
+              <Card key={it.title} className={spans[idx] ?? "lg:col-span-6"}>
+                <div className="h-full p-6 flex flex-col justify-between">
                   <div>
-                    <p className="text-xs text-neutral-400">Capability</p>
-                    <h4 className="mt-2 text-2xl font-semibold">
-                      {it.title}
-                    </h4>
-                    <p className="mt-3 text-neutral-400">
+                    <p className="text-xs text-neutral-400 tracking-wide">
+                      {t.bento.label}
+                    </p>
+
+                    <h4 className="mt-3 text-xl font-semibold">{it.title}</h4>
+
+                    <p className="mt-3 text-sm text-neutral-400 leading-relaxed">
                       {it.desc}
                     </p>
                   </div>

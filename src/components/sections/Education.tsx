@@ -2,22 +2,26 @@ import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Reveal from "../ui/Reveal";
 import Card from "../ui/Card";
-import { education } from "../../data/education";
+import { educationByLang } from "../../data/education";
+import { useI18n } from "../../i18n/I18nProvider";
 
 export default function Education() {
+  const { t, lang } = useI18n();
+  const list = educationByLang[lang];
+
   return (
-    <section id="education" className="py-24 border-t border-neutral-800">
+    <section id="education" className="py-20 md:py-24 border-t border-neutral-800">
       <Container>
         <Reveal>
-          <SectionHeader
-            title="Education & Certifications"
-            subtitle="Formal education and targeted training supporting leadership, delivery and secure operations."
-          />
+          <SectionHeader title={t.education.title} subtitle={t.education.subtitle} />
         </Reveal>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {education.map((e) => (
-            <Reveal key={`${e.title}-${e.institution}-${e.year ?? e.period ?? ""}`} delay={0.05}>
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          {list.map((e) => (
+            <Reveal
+              key={`${e.title}-${e.institution}-${e.year ?? e.period ?? ""}`}
+              delay={0.05}
+            >
               <Card>
                 <div className="p-8">
                   <div className="flex items-start justify-between gap-4">
@@ -32,7 +36,7 @@ export default function Education() {
                     </div>
 
                     <span className="text-xs text-neutral-500 border border-neutral-800 px-3 py-1 rounded-full">
-                      {e.year ? "Year" : "Period"}
+                      {e.year ? t.education.year : t.education.period}
                     </span>
                   </div>
 

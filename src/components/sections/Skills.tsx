@@ -1,13 +1,16 @@
 import Container from "../layout/Container";
 import Reveal from "../ui/Reveal";
 import { skills } from "../../data/skills";
+import { useI18n } from "../../i18n/I18nProvider";
 
 export default function Skills() {
+  const { t } = useI18n();
+
   return (
-    <section id="skills" className="py-24 border-t border-neutral-800">
+    <section id="skills" className="py-20 md:py-24 border-t border-neutral-800">
       <Container>
         <Reveal>
-          <h3 className="text-3xl font-semibold mb-10">Skills</h3>
+          <h3 className="text-3xl font-semibold mb-10">{t.skills.title}</h3>
         </Reveal>
 
         <Reveal delay={0.08}>

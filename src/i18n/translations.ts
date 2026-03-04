@@ -1,6 +1,11 @@
 export const translations = {
   en: {
-    nav: { experience: "Experience", projects: "Case Studies", contact: "Contact" },
+    nav: {
+      experience: "Experience",
+      projects: "Case Studies",
+      contact: "Contact",
+    },
+
     hero: {
       role: "Executive Technical Consultant • Space Systems Architect",
       title: "GNSS, secure architectures,\ndigital execution.",
@@ -9,7 +14,45 @@ export const translations = {
       cta1: "Experience",
       cta2: "Case Studies",
       cta3: "Contact",
+      cv: "Download CV",
     },
+
+    bento: {
+      title: "Domains & Capabilities",
+      subtitle: "Executive view of core expertise, delivery approach and innovation track.",
+      label: "Capability",
+    },
+
+    experience: {
+      title: "Experience",
+      subtitle:
+        "Selected roles across Galileo operations, secure services, accreditation, and mission-critical delivery.",
+      contractRole: "Contract role",
+      role: "Role",
+      client: "Client",
+    },
+
+    education: {
+      title: "Education & Certifications",
+      subtitle:
+        "Formal education and targeted training supporting leadership, delivery and secure operations.",
+      year: "Year",
+      period: "Period",
+    },
+
+    projects: {
+      title: "Case Studies",
+      subtitle: "Selected initiatives framed as executive briefs: problem, approach, impact.",
+      tagSpace: "Space",
+      tagDigital: "Digital",
+      tagVenture: "Venture",
+      problem: "Problem",
+      approach: "Approach",
+      impact: "Impact",
+    },
+
+    skills: { title: "Skills" },
+
     contact: {
       title: "Contact",
       subtitle: "Open to advisory roles, architecture discussions and strategic collaborations.",
@@ -18,6 +61,8 @@ export const translations = {
         "If you're working on space systems, secure platforms, governance frameworks or digital transformation initiatives, I’m happy to explore how I can support.",
       email: "Email",
       book: "Book a Call",
+      availability: "Availability",
+      trusted: "Trusted delivery",
       ctaTitle: "Available for advisory mandates in 2026.",
       ctaDesc: "Architecture reviews, governance support, secure systems, digital delivery.",
       ctaBtn: "Let’s talk",
@@ -25,7 +70,12 @@ export const translations = {
   },
 
   cs: {
-    nav: { experience: "Zkušenosti", projects: "Případové studie", contact: "Kontakt" },
+    nav: {
+      experience: "Zkušenosti",
+      projects: "Případové studie",
+      contact: "Kontakt",
+    },
+
     hero: {
       role: "Výkonný technický konzultant • Architekt kosmických systémů",
       title: "GNSS, bezpečné architektury,\ndigitální realizace.",
@@ -34,7 +84,45 @@ export const translations = {
       cta1: "Zkušenosti",
       cta2: "Případové studie",
       cta3: "Kontakt",
+      cv: "Stáhnout CV",
     },
+
+    bento: {
+      title: "Oblasti & schopnosti",
+      subtitle: "Executive přehled klíčové expertízy, stylu dodávky a inovačního směru.",
+      label: "Schopnost",
+    },
+
+    experience: {
+      title: "Zkušenosti",
+      subtitle:
+        "Vybrané role napříč Galileo operacemi, secure službami, akreditací a dodávkou kritických systémů.",
+      contractRole: "Kontraktní role",
+      role: "Role",
+      client: "Klient",
+    },
+
+    education: {
+      title: "Vzdělání & certifikace",
+      subtitle:
+        "Formální vzdělání a cílené kurzy pro leadership, delivery a secure operations.",
+      year: "Rok",
+      period: "Období",
+    },
+
+    projects: {
+      title: "Případové studie",
+      subtitle: "Vybrané iniciativy ve formátu executive brief: problém, přístup, dopad.",
+      tagSpace: "Space",
+      tagDigital: "Digital",
+      tagVenture: "Venture",
+      problem: "Problém",
+      approach: "Přístup",
+      impact: "Dopad",
+    },
+
+    skills: { title: "Dovednosti" },
+
     contact: {
       title: "Kontakt",
       subtitle: "Otevřený poradním rolím, diskuzím o architektuře a strategické spolupráci.",
@@ -43,6 +131,8 @@ export const translations = {
         "Pokud pracujete na kosmických systémech, bezpečných platformách, governance nebo digitální transformaci, rád proberu, jak mohu pomoci.",
       email: "Email",
       book: "Domluvit hovor",
+      availability: "Dostupnost",
+      trusted: "Důvěryhodná dodávka",
       ctaTitle: "Dostupný pro poradní mandáty v roce 2026.",
       ctaDesc: "Revize architektury, podpora governance, bezpečné systémy, digitální dodávka.",
       ctaBtn: "Ozvěte se",

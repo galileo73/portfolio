@@ -1,6 +1,7 @@
 import Container from "../layout/Container";
 import Reveal from "../ui/Reveal";
 import profileImg from "../../assets/profile.png";
+import cvPdf from "../../assets/curriculum/cv.pdf";
 import { useI18n } from "../../i18n/I18nProvider";
 
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
@@ -16,7 +17,7 @@ export default function Hero() {
   const { t } = useI18n();
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(255,255,255,0.05),transparent_55%)]" />
 
       <Container>
@@ -63,6 +64,14 @@ export default function Hero() {
                 >
                   {t.hero.cta3}
                 </a>
+
+                <a
+                  href={cvPdf}
+                  download
+                  className="px-6 py-3 rounded-xl border border-neutral-800 hover:border-white/50 transition text-neutral-200"
+                >
+                  {t.hero.cv}
+                </a>
               </div>
             </Reveal>
 
@@ -88,7 +97,7 @@ export default function Hero() {
 
           {/* RIGHT */}
           <Reveal delay={0.1}>
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end lg:-mt-10">
               <div className="w-full max-w-[520px] lg:max-w-none">
                 <div className="relative rounded-2xl p-[1px]">
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-white/5 to-transparent" />

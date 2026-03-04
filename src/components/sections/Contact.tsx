@@ -8,16 +8,17 @@ import {
   IconCalendar,
   IconX,
 } from "../ui/Icons";
-import { testimonial } from "../../data/testimonial";
+import { testimonialByLang } from "../../data/testimonial";
 import { useI18n } from "../../i18n/I18nProvider";
 
 export default function Contact() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+  const testimonial = testimonialByLang[lang];
 
   return (
     <section
       id="contact"
-      className="py-28 border-t border-neutral-800 relative overflow-hidden"
+      className="relative overflow-hidden py-20 md:py-24 border-t border-neutral-800"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(255,255,255,0.06),transparent_55%)]" />
 
@@ -27,15 +28,11 @@ export default function Contact() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <div className="mt-16 max-w-3xl mx-auto">
+          <div className="mt-12 max-w-3xl mx-auto">
             <div className="rounded-2xl border border-neutral-800 glass-surface p-10 shadow-[0_0_60px_rgba(255,255,255,0.04)]">
-              <h3 className="text-2xl font-semibold mb-6">
-                {t.contact.headline}
-              </h3>
+              <h3 className="text-2xl font-semibold mb-6">{t.contact.headline}</h3>
 
-              <p className="text-neutral-400 mb-10 leading-relaxed">
-                {t.contact.desc}
-              </p>
+              <p className="text-neutral-400 mb-10 leading-relaxed">{t.contact.desc}</p>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <a
@@ -100,22 +97,18 @@ export default function Contact() {
                   </div>
 
                   <span className="text-xs text-neutral-500 border border-neutral-800 px-3 py-1 rounded-full">
-                    Trusted delivery
+                    {t.contact.trusted}
                   </span>
                 </div>
               </div>
 
-              {/* FULL-WIDTH CTA (D) */}
+              {/* CTA */}
               <div className="mt-8">
                 <div className="hover-lift rounded-2xl border border-neutral-800 glass-surface p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <p className="text-sm text-neutral-400">Availability</p>
-                    <p className="mt-2 text-xl font-semibold">
-                      {t.contact.ctaTitle}
-                    </p>
-                    <p className="mt-2 text-neutral-400">
-                      {t.contact.ctaDesc}
-                    </p>
+                    <p className="text-sm text-neutral-400">{t.contact.availability}</p>
+                    <p className="mt-2 text-xl font-semibold">{t.contact.ctaTitle}</p>
+                    <p className="mt-2 text-neutral-400">{t.contact.ctaDesc}</p>
                   </div>
 
                   <a
