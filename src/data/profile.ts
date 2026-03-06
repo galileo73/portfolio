@@ -13,14 +13,14 @@ export const profile = {
     "+39 333 264 5642"
   ],
 
-  website: "https://github.com/galileo73",
+  website: "https://gianluigi-rossi-portfolio.netlify.app/",
 
   links: {
-    linkedin: "https://linkedin.com/in/gianluigirossialtran",
+    linkedin: "https://linkedin.com/in/gianluigirossi73",
     github: "https://github.com/galileo73",
-    instagram: "",
-    x: "",
-    opensea: "",
+    instagram: "https://www.instagram.com/lunarsentinel.nft/",
+    x: "https://x.com/LunarSentNFT",
+    opensea: "https://opensea.io/collection/lunar-sentinel-663276653",
     calendly: ""
   }
 };
