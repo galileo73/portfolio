@@ -12,7 +12,7 @@ export default function Header() {
             href="#"
             className="text-xl font-semibold tracking-tight text-white"
           >
-            Gianluigi
+            Gianluigi Rossi
           </a>
 
           <div className="flex items-center gap-6">
