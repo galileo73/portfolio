@@ -3,15 +3,9 @@ export const profile = {
   headline: "Executive Technical Consultant • Space Systems Architect",
   location: "Prague, Czechia",
 
-  emails: [
-    "gianluigi.rossi@exprivia.com",
-    "rossi.gianluigi@gmail.com"
-  ],
+  emails: ["engineering@exospace.space", "rossi.gianluigi@gmail.com"],
 
-  phones: [
-    "+420 606 350 888",
-    "+39 333 264 5642"
-  ],
+  phones: ["+420 606 350 888", "+39 333 264 5642"],
 
   website: "https://gianluigi-rossi-portfolio.netlify.app/",
 
@@ -21,6 +15,6 @@ export const profile = {
     instagram: "https://www.instagram.com/lunarsentinel.nft/",
     x: "https://x.com/LunarSentNFT",
     opensea: "https://opensea.io/collection/lunar-sentinel-663276653",
-    calendly: ""
-  }
+    calendly: "",
+  },
 };
