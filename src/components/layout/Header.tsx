@@ -1,5 +1,5 @@
 import Container from "./Container";
-import { useI18n } from "../../i18n/I18nProvider";
+import { useI18n } from "../../i18n/i18n-context";
 
 export default function Header() {
   const { t, lang, setLang } = useI18n();
@@ -21,7 +21,7 @@ export default function Header() {
                 {t.nav.experience}
               </a>
               <a href="#education" className="hover:text-white transition">
-                Education
+                {t.nav.education}
               </a>
               <a href="#projects" className="hover:text-white transition">
                 {t.nav.projects}

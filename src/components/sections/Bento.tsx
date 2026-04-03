@@ -2,7 +2,8 @@ import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Card from "../ui/Card";
 import Reveal from "../ui/Reveal";
-import { useI18n } from "../../i18n/I18nProvider";
+import { useI18n } from "../../i18n/i18n-context";
+
 import { bentoByLang } from "../../data/bento";
 
 const spans = [

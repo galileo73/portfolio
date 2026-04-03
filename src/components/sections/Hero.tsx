@@ -2,7 +2,8 @@ import Container from "../layout/Container";
 import Reveal from "../ui/Reveal";
 import profileImg from "../../assets/profile.png";
 import cvPdf from "../../assets/curriculum/cv.pdf";
-import { useI18n } from "../../i18n/I18nProvider";
+import { useI18n } from "../../i18n/i18n-context";
+
 import { profile } from "../../data/profile";
 
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
@@ -11,7 +12,7 @@ import { SiOpensea } from "react-icons/si";
 const METRICS = [
   { k: "20+ yrs", v: "Mission-critical systems" },
   { k: "Galileo", v: "Ground Segment / PRS" },
-  { k: "Security", v: "Accreditation & Risk" }
+  { k: "Security", v: "Accreditation & Risk" },
 ];
 
 export default function Hero() {
@@ -24,10 +25,8 @@ export default function Hero() {
       <Container>
         <div className="pt-10 md:pt-12 pb-16 md:pb-20">
           <div className="grid gap-10 lg:gap-12 items-start lg:grid-cols-[1.15fr_0.85fr]">
-
             {/* LEFT */}
             <div>
-
               <Reveal>
                 <p className="text-sm text-neutral-400 tracking-wide">
                   {t.hero.role}
@@ -48,7 +47,6 @@ export default function Hero() {
 
               <Reveal delay={0.15}>
                 <div className="mt-8 flex flex-wrap gap-3">
-
                   <a
                     href="#experience"
                     className="px-6 py-3 rounded-xl bg-white text-black font-medium hover:opacity-90 transition"
@@ -77,19 +75,17 @@ export default function Hero() {
                   >
                     {t.hero.cv}
                   </a>
-
                 </div>
               </Reveal>
 
               <Reveal delay={0.2}>
                 <div className="mt-8 flex flex-wrap gap-2 text-xs text-neutral-500">
-
                   {[
                     "Galileo • PRS",
                     "Security Accreditation",
                     "Ground Segment",
                     "System Engineering",
-                    "Digital Platforms"
+                    "Digital Platforms",
                   ].map((x) => (
                     <span
                       key={x}
@@ -98,27 +94,19 @@ export default function Hero() {
                       {x}
                     </span>
                   ))}
-
                 </div>
               </Reveal>
-
             </div>
-
 
             {/* RIGHT */}
             <Reveal delay={0.1}>
               <div className="flex justify-center lg:justify-end">
-
                 <div className="w-full max-w-[520px]">
-
                   <div className="relative rounded-2xl p-[1px]">
-
                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-white/5 to-transparent" />
 
                     <div className="relative rounded-2xl bg-neutral-950/70 backdrop-blur-xl border border-neutral-800 p-8 shadow-[0_0_60px_rgba(255,255,255,0.04)]">
-
                       <div className="flex items-center gap-5">
-
                         <img
                           src={profileImg}
                           alt={profile.name}
@@ -126,7 +114,9 @@ export default function Hero() {
                         />
 
                         <div>
-                          <p className="text-sm text-neutral-400">{profile.name}</p>
+                          <p className="text-sm text-neutral-400">
+                            {profile.name}
+                          </p>
                           <p className="text-xl font-semibold">
                             Consulting • Architecture
                           </p>
@@ -134,29 +124,25 @@ export default function Hero() {
                             Space systems + modern delivery
                           </p>
                         </div>
-
                       </div>
 
-
                       <div className="mt-7 space-y-3">
-
                         {METRICS.map((m) => (
                           <div
                             key={m.k}
                             className="flex items-center justify-between rounded-xl border border-neutral-900 bg-black/30 px-4 py-3"
                           >
                             <span className="text-sm text-white">{m.k}</span>
-                            <span className="text-sm text-neutral-400">{m.v}</span>
+                            <span className="text-sm text-neutral-400">
+                              {m.v}
+                            </span>
                           </div>
                         ))}
-
                       </div>
-
 
                       {/* SOCIAL */}
 
                       <div className="mt-7 flex gap-3">
-
                         <a
                           href={profile.links.linkedin}
                           target="_blank"
@@ -196,18 +182,12 @@ export default function Hero() {
                             <SiOpensea size={18} />
                           </a>
                         )}
-
                       </div>
-
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
             </Reveal>
-
           </div>
         </div>
       </Container>

@@ -2,7 +2,7 @@ import Container from "../layout/Container";
 import SectionHeader from "../ui/SectionHeader";
 import Reveal from "../ui/Reveal";
 import { profile } from "../../data/profile";
-import { useI18n } from "../../i18n/I18nProvider";
+import { useI18n } from "../../i18n/i18n-context";
 
 export default function Contact() {
   const { t } = useI18n();
@@ -13,7 +13,6 @@ export default function Contact() {
       className="py-20 md:py-24 border-t border-neutral-800"
     >
       <Container>
-
         <Reveal>
           <SectionHeader
             title={t.contact.title}
@@ -23,13 +22,9 @@ export default function Contact() {
 
         <Reveal delay={0.05}>
           <div className="mt-12 max-w-3xl mx-auto text-center">
-
-            <p className="text-neutral-400 leading-relaxed">
-              {t.contact.desc}
-            </p>
+            <p className="text-neutral-400 leading-relaxed">{t.contact.desc}</p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-
               <a
                 href={`mailto:${profile.emails[0]}`}
                 className="px-6 py-3 rounded-xl border border-neutral-700 hover:border-white/70 transition"
@@ -47,12 +42,9 @@ export default function Contact() {
                   {t.contact.book}
                 </a>
               )}
-
             </div>
-
           </div>
         </Reveal>
-
       </Container>
     </section>
   );

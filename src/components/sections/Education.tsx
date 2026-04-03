@@ -3,17 +3,23 @@ import SectionHeader from "../ui/SectionHeader";
 import Reveal from "../ui/Reveal";
 import Card from "../ui/Card";
 import { educationByLang } from "../../data/education";
-import { useI18n } from "../../i18n/I18nProvider";
+import { useI18n } from "../../i18n/i18n-context";
 
 export default function Education() {
   const { t, lang } = useI18n();
   const list = educationByLang[lang];
 
   return (
-    <section id="education" className="py-20 md:py-24 border-t border-neutral-800">
+    <section
+      id="education"
+      className="py-20 md:py-24 border-t border-neutral-800"
+    >
       <Container>
         <Reveal>
-          <SectionHeader title={t.education.title} subtitle={t.education.subtitle} />
+          <SectionHeader
+            title={t.education.title}
+            subtitle={t.education.subtitle}
+          />
         </Reveal>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -30,7 +36,7 @@ export default function Education() {
                       <p className="mt-2 text-neutral-400">{e.institution}</p>
                       <p className="mt-1 text-sm text-neutral-500">
                         {e.year ? e.year : e.period ? e.period : ""}
-                        {(e.city || e.country) ? " • " : ""}
+                        {e.city || e.country ? " • " : ""}
                         {[e.city, e.country].filter(Boolean).join(", ")}
                       </p>
                     </div>

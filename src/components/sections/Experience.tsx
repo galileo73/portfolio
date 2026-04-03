@@ -3,7 +3,7 @@ import SectionHeader from "../ui/SectionHeader";
 import Reveal from "../ui/Reveal";
 import Card from "../ui/Card";
 import { experienceByLang } from "../../data/experience";
-import { useI18n } from "../../i18n/I18nProvider";
+import { useI18n } from "../../i18n/i18n-context";
 
 function formatPeriod(start: string, end: string | null, locale: string) {
   const s = new Date(start);
@@ -19,10 +19,16 @@ export default function Experience() {
   const locale = lang === "cs" ? "cs-CZ" : "en-US";
 
   return (
-    <section id="experience" className="py-20 md:py-24 border-t border-neutral-800">
+    <section
+      id="experience"
+      className="py-20 md:py-24 border-t border-neutral-800"
+    >
       <Container>
         <Reveal>
-          <SectionHeader title={t.experience.title} subtitle={t.experience.subtitle} />
+          <SectionHeader
+            title={t.experience.title}
+            subtitle={t.experience.subtitle}
+          />
         </Reveal>
 
         <div className="mt-12 space-y-6">
@@ -40,7 +46,7 @@ export default function Experience() {
                         <p className="mt-2 text-neutral-400">{x.company}</p>
                         <p className="mt-1 text-sm text-neutral-500">
                           {formatPeriod(x.start, x.end, locale)}
-                          {(city || country) ? " • " : ""}
+                          {city || country ? " • " : ""}
                           {[city, country].filter(Boolean).join(", ")}
                         </p>
                       </div>

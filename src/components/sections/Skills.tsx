@@ -1,7 +1,7 @@
 import Container from "../layout/Container";
 import Reveal from "../ui/Reveal";
 import { skills } from "../../data/skills";
-import { useI18n } from "../../i18n/I18nProvider";
+import { useI18n } from "../../i18n/i18n-context";
 
 export default function Skills() {
   const { t } = useI18n();

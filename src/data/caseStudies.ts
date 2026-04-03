@@ -26,8 +26,16 @@ export const caseStudiesByLang: Record<LangKey, CaseStudy[]> = {
         "Led evolution reviews, consolidated inputs, produced deployment/migration plans, and supported readiness reviews and performance reporting.",
       impact:
         "Reduced deployment risk and improved decision-making through structured planning and reporting; optimized migration timelines.",
-      tech: ["Service Ops", "Validation Planning", "Risk Analysis", "Reporting", "Stakeholder Mgmt"],
-      links: [{ label: "LinkedIn", href: "PASTE_LINKEDIN" }],
+      tech: [
+        "Service Ops",
+        "Validation Planning",
+        "Risk Analysis",
+        "Reporting",
+        "Stakeholder Mgmt",
+      ],
+      links: [
+        { label: "LinkedIn", href: "https://linkedin.com/in/gianluigirossi73" },
+      ],
     },
     {
       title: "GOVSATCOM Security Accreditation Support (Initial Service)",
@@ -40,7 +48,12 @@ export const caseStudiesByLang: Record<LangKey, CaseStudy[]> = {
         "Reviewed security requirements/specs/design, supported accreditation documentation, and analyzed anomalies/non-conformances for timely resolution.",
       impact:
         "Improved compliance readiness and reduced accreditation friction by accelerating closure of security findings and maturing evidence.",
-      tech: ["Security Governance", "Compliance", "Accreditation", "Non-Conformance Mgmt"],
+      tech: [
+        "Security Governance",
+        "Compliance",
+        "Accreditation",
+        "Non-Conformance Mgmt",
+      ],
       links: [{ label: "Contact", href: "#contact" }],
     },
     {
@@ -54,7 +67,15 @@ export const caseStudiesByLang: Record<LangKey, CaseStudy[]> = {
         "Built React layout with reusable components, implemented FastAPI + MongoDB backend, JWT auth/decoding, and role-aware UI.",
       impact:
         "Delivered a maintainable base platform enabling rapid expansion (Admin, contracts, configuration, future storage/blockchain integrations).",
-      tech: ["React", "Vite", "TypeScript", "Tailwind", "FastAPI", "MongoDB", "JWT"],
+      tech: [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Tailwind",
+        "FastAPI",
+        "MongoDB",
+        "JWT",
+      ],
       links: [{ label: "GitHub", href: "https://github.com/galileo73" }],
     },
   ],
@@ -71,8 +92,16 @@ export const caseStudiesByLang: Record<LangKey, CaseStudy[]> = {
         "Vedení evolučních review, konsolidace vstupů, příprava deployment/migračních plánů a podpora readiness review i performance reportingu.",
       impact:
         "Snížení rizik nasazení a lepší rozhodování díky strukturovanému plánování a reportingu; optimalizace migračních termínů.",
-      tech: ["Service Ops", "Plán validace", "Analýza rizik", "Reporting", "Stakeholdeři"],
-      links: [{ label: "LinkedIn", href: "PASTE_LINKEDIN" }],
+      tech: [
+        "Service Ops",
+        "Plán validace",
+        "Analýza rizik",
+        "Reporting",
+        "Stakeholdeři",
+      ],
+      links: [
+        { label: "LinkedIn", href: "https://linkedin.com/in/gianluigirossi73" },
+      ],
     },
     {
       title: "Podpora bezpečnostní akreditace GOVSATCOM (Initial Service)",
@@ -85,8 +114,15 @@ export const caseStudiesByLang: Record<LangKey, CaseStudy[]> = {
         "Revize bezpečnostních požadavků/specifikací/návrhu, podpora akreditační dokumentace a analýza anomálií/neshod pro rychlé uzavírání.",
       impact:
         "Zvýšení připravenosti compliance a snížení tření v akreditaci díky rychlejšímu uzavírání findingů a dozrání evidence.",
-      tech: ["Security Governance", "Compliance", "Akreditace", "Řízení neshod"],
-      links: [{ label: "Kontakt", href: "#contact" }],
+      tech: [
+        "Security Governance",
+        "Compliance",
+        "Akreditace",
+        "Řízení neshod",
+      ],
+      links: [
+        { label: "Kontakt", href: "https://linkedin.com/in/gianluigirossi73" },
+      ],
     },
     {
       title: "EO Veracity – Full-Stack dashboard (React + FastAPI)",
@@ -99,7 +135,15 @@ export const caseStudiesByLang: Record<LangKey, CaseStudy[]> = {
         "React layout s reusable komponentami, backend FastAPI + MongoDB, JWT auth/dekódování a role-aware UI.",
       impact:
         "Dodaná udržovatelná platforma pro rychlé rozšíření (Admin, kontrakty, konfigurace, budoucí storage/blockchain integrace).",
-      tech: ["React", "Vite", "TypeScript", "Tailwind", "FastAPI", "MongoDB", "JWT"],
+      tech: [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Tailwind",
+        "FastAPI",
+        "MongoDB",
+        "JWT",
+      ],
       links: [{ label: "GitHub", href: "https://github.com/galileo73" }],
     },
   ],
