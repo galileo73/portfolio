@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 type Props = {
   children: React.ReactNode;
@@ -6,6 +6,12 @@ type Props = {
 };
 
 export default function Reveal({ children, delay = 0 }: Props) {
+  const prefersReducedMotion = useReducedMotion();
+
+  if (prefersReducedMotion) {
+    return <div>{children}</div>;
+  }
+
   return (
     <motion.div
       initial="hidden"

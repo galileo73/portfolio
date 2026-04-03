@@ -33,7 +33,10 @@ export default function Header() {
 
             <div className="flex items-center rounded-xl border border-neutral-800 overflow-hidden text-sm">
               <button
+                type="button"
                 onClick={() => setLang("en")}
+                aria-pressed={lang === "en"}
+                aria-label="Switch language to English"
                 className={`px-3 py-1.5 transition ${
                   lang === "en"
                     ? "bg-white text-black"
@@ -42,8 +45,12 @@ export default function Header() {
               >
                 EN
               </button>
+
               <button
+                type="button"
                 onClick={() => setLang("cs")}
+                aria-pressed={lang === "cs"}
+                aria-label="Přepnout jazyk do češtiny"
                 className={`px-3 py-1.5 transition ${
                   lang === "cs"
                     ? "bg-white text-black"

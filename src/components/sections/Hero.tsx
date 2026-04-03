@@ -3,17 +3,10 @@ import Reveal from "../ui/Reveal";
 import profileImg from "../../assets/profile.png";
 import cvPdf from "../../assets/curriculum/cv.pdf";
 import { useI18n } from "../../i18n/i18n-context";
-
 import { profile } from "../../data/profile";
 
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiOpensea } from "react-icons/si";
-
-const METRICS = [
-  { k: "20+ yrs", v: "Mission-critical systems" },
-  { k: "Galileo", v: "Ground Segment / PRS" },
-  { k: "Security", v: "Accreditation & Risk" },
-];
 
 export default function Hero() {
   const { t } = useI18n();
@@ -25,7 +18,6 @@ export default function Hero() {
       <Container>
         <div className="pt-10 md:pt-12 pb-16 md:pb-20">
           <div className="grid gap-10 lg:gap-12 items-start lg:grid-cols-[1.15fr_0.85fr]">
-            {/* LEFT */}
             <div>
               <Reveal>
                 <p className="text-sm text-neutral-400 tracking-wide">
@@ -80,13 +72,7 @@ export default function Hero() {
 
               <Reveal delay={0.2}>
                 <div className="mt-8 flex flex-wrap gap-2 text-xs text-neutral-500">
-                  {[
-                    "Galileo • PRS",
-                    "Security Accreditation",
-                    "Ground Segment",
-                    "System Engineering",
-                    "Digital Platforms",
-                  ].map((x) => (
+                  {t.hero.tags.map((x) => (
                     <span
                       key={x}
                       className="border border-neutral-800 px-3 py-1 rounded-full"
@@ -98,7 +84,6 @@ export default function Hero() {
               </Reveal>
             </div>
 
-            {/* RIGHT */}
             <Reveal delay={0.1}>
               <div className="flex justify-center lg:justify-end">
                 <div className="w-full max-w-[520px]">
@@ -118,16 +103,16 @@ export default function Hero() {
                             {profile.name}
                           </p>
                           <p className="text-xl font-semibold">
-                            Consulting • Architecture
+                            {t.hero.cardTitle}
                           </p>
                           <p className="text-sm text-neutral-500 mt-1">
-                            Space systems + modern delivery
+                            {t.hero.cardSubtitle}
                           </p>
                         </div>
                       </div>
 
                       <div className="mt-7 space-y-3">
-                        {METRICS.map((m) => (
+                        {t.hero.metrics.map((m) => (
                           <div
                             key={m.k}
                             className="flex items-center justify-between rounded-xl border border-neutral-900 bg-black/30 px-4 py-3"
@@ -140,13 +125,12 @@ export default function Hero() {
                         ))}
                       </div>
 
-                      {/* SOCIAL */}
-
                       <div className="mt-7 flex gap-3">
                         <a
                           href={profile.links.linkedin}
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Open LinkedIn profile"
                           className="hover-lift w-10 h-10 flex items-center justify-center rounded-xl border border-neutral-800 bg-black/20 hover:border-white/40 transition"
                         >
                           <FaLinkedin size={18} />
@@ -156,6 +140,7 @@ export default function Hero() {
                           href={profile.links.github}
                           target="_blank"
                           rel="noreferrer"
+                          aria-label="Open GitHub profile"
                           className="hover-lift w-10 h-10 flex items-center justify-center rounded-xl border border-neutral-800 bg-black/20 hover:border-white/40 transition"
                         >
                           <FaGithub size={18} />
@@ -166,6 +151,7 @@ export default function Hero() {
                             href={profile.links.instagram}
                             target="_blank"
                             rel="noreferrer"
+                            aria-label="Open Instagram profile"
                             className="hover-lift w-10 h-10 flex items-center justify-center rounded-xl border border-neutral-800 bg-black/20 hover:border-white/40 transition"
                           >
                             <FaInstagram size={18} />
@@ -177,6 +163,7 @@ export default function Hero() {
                             href={profile.links.opensea}
                             target="_blank"
                             rel="noreferrer"
+                            aria-label="Open OpenSea profile"
                             className="hover-lift w-10 h-10 flex items-center justify-center rounded-xl border border-neutral-800 bg-black/20 hover:border-white/40 transition"
                           >
                             <SiOpensea size={18} />
