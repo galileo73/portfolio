@@ -1,11 +1,16 @@
-import { createContext, useContext } from "react";
+import {
+  createContext,
+  useContext,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 import { translations, type Lang } from "./translations";
 
-export type Dict = typeof translations.en;
+export type Dict = (typeof translations)[Lang];
 
 export type I18nContextValue = {
   lang: Lang;
-  setLang: (l: Lang) => void;
+  setLang: Dispatch<SetStateAction<Lang>>;
   t: Dict;
 };
 

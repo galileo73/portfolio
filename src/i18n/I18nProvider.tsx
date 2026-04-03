@@ -9,13 +9,14 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     document.documentElement.lang = lang;
   }, [lang]);
 
-  const value = useMemo<I18nContextValue>(() => {
-    return {
+  const value = useMemo<I18nContextValue>(
+    () => ({
       lang,
       setLang,
       t: translations[lang],
-    };
-  }, [lang]);
+    }),
+    [lang],
+  );
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }
