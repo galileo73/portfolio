@@ -33,8 +33,7 @@ export default function Experience() {
 
         <div className="mt-12 space-y-6">
           {list.map((x) => {
-            const city = (x as any).city as string | undefined;
-            const country = (x as any).country as string | undefined;
+            const { city, country } = x;
 
             return (
               <Reveal key={`${x.company}-${x.role}-${x.start}`} delay={0.05}>
